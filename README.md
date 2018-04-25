@@ -4,7 +4,7 @@ A basic program that receives a text with this pattern:
 
 
 username1,1: @ username1,2 @ username1,3 ... @ username1, N \ n
-.
+username2,1: @ username2,2 @ username2,3 ... @ username2, N \ n
 .
 .
 usernameN, 1: @ usernameN, 2 @ usernameN, 3 ... @ usernameN, 4 \ n
