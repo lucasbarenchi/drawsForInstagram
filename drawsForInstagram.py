@@ -2,8 +2,15 @@ import re
 import sys
 
 def search(data):
+    res = re.sub(r'(\s*@\S*)+','', data)
 
+    # string to list
+    res = list(res.split("\n"))
 
+    # order the list
+    res = sorted(res, key=str.lower)
+
+    print(res)
     return res
 
 if __name__ == '__main__':
@@ -17,10 +24,10 @@ if __name__ == '__main__':
     text = file.read()
     file.close()
 
-    # process the data
+    # process the data and returns a list
     res = search(text)
 
     # write in the output
     file = open(output, 'w')
-    file.write(text)
+    file.write('\n'.join(res))
     file.close()
